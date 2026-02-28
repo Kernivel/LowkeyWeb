@@ -120,6 +120,65 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 })();
 
 /* ═══════════════════════════════════════════════════════════════════════
+   SUB-ACCORDIONS  (impl-block inside accordion-body)
+   Same open/close animation as parent, but scoped to .impl-block
+   ═══════════════════════════════════════════════════════════════════════ */
+(function initImplAccordions() {
+  function animateOpen(body) {
+    body.style.display = 'block';
+    body.style.overflow = 'hidden';
+    const targetH = body.scrollHeight;
+    body.style.maxHeight = '0px';
+    body.style.transition = 'max-height 0.28s ease';
+    body.offsetHeight; // eslint-disable-line
+    body.style.maxHeight = targetH + 'px';
+    body.addEventListener('transitionend', () => {
+      body.style.maxHeight = '';
+      body.style.overflow = '';
+    }, { once: true });
+  }
+
+  function animateClose(body) {
+    body.style.maxHeight = body.scrollHeight + 'px';
+    body.style.overflow = 'hidden';
+    body.style.transition = 'max-height 0.22s ease';
+    body.offsetHeight; // eslint-disable-line
+    body.style.maxHeight = '0px';
+    body.addEventListener('transitionend', () => {
+      body.style.display = 'none';
+      body.style.maxHeight = '';
+      body.style.overflow = '';
+    }, { once: true });
+  }
+
+  /* Use event delegation on the document — impl-blocks may be inside
+     a parent accordion that was closed (not yet in DOM flow) when this
+     runs, so delegation is more reliable than direct binding. */
+  document.addEventListener('click', (e) => {
+    const header = e.target.closest('.impl-header');
+    if (!header) return;
+
+    const block = header.closest('.impl-block');
+    const body  = block.querySelector('.impl-body');
+    if (!block || !body) return;
+
+    const isOpen = block.classList.toggle('is-open');
+    header.setAttribute('aria-expanded', isOpen);
+
+    if (isOpen) {
+      animateOpen(body);
+      /* When a parent accordion closes, all child impl-bodies also close
+         visually — force sync state so re-opening is clean. */
+    } else {
+      animateClose(body);
+    }
+
+    /* Propagation stop prevents the parent accordion-header from firing */
+    e.stopPropagation();
+  });
+})();
+
+/* ═══════════════════════════════════════════════════════════════════════
    LIGHTBOX
    ═══════════════════════════════════════════════════════════════════════ */
 (function initLightbox() {

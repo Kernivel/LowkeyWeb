@@ -42,8 +42,7 @@
             3D WORK <span class="nav-chevron">▾</span>
           </a>
           <div class="nav-dropdown">
-            <a href="#3d-weapons">Weapons</a>
-            <a href="#3d-props">Environment &amp; Props</a>
+            <a href="#3d-art">Arsenal &amp; Equipment</a>
           </div>
         </li>
 
@@ -68,7 +67,7 @@
     <div class="hero-content">
       <div class="hero-tag">
         <span class="tag-dot"></span>
-        TACTICAL HORROR FPS · UNREAL ENGINE 5.7 · CO-OP
+        TACTICAL HORROR FPS · UNREAL ENGINE 5 · CO-OP
       </div>
 
       <h1 class="hero-title">LOWKEY</h1>
@@ -79,7 +78,7 @@
 
       <p class="hero-desc">
         Cooperative extraction horror built on Unreal Engine 5.7.<br>
-        Modern gunfeel. Comsmic Horror & anomalies.
+        Modern gunfeel. Cosmic Horror &amp; anomalies.
       </p>
 
       <div class="hero-cta">
@@ -122,14 +121,13 @@
           <h3 class="about-heading">UE5 Developer &amp; 3D Artist</h3>
           <p>
             I build game systems from the ground up — C++ architectures in Unreal Engine 5,
-            AI behaviors, ability pipelines, and networked gameplay — alongside the 3D assets
-            that bring them to life. Hard-surface modelling, PBR texturing, and game-ready
+            AI behaviors, ability pipelines, Inventory component and networked gameplay — alongside the 3D assets
+            that bring them to life. 3D Modelling, PBR texturing, and game-ready
             production in Blender and Substance Painter.
           </p>
           <p>
-            My work sits at the intersection of tech and art: I implement the systems,
-            then model and texture the assets they depend on — from weapon mechanics
-            to the gun in the player's hands.
+            My work sits combines tech and art: I implement the systems
+            and then model and texture the assets they depend on.
           </p>
           <p>
             <strong>Lowkey</strong> — my current project — is a cooperative tactical horror FPS
@@ -140,9 +138,10 @@
             abilities. Losing will set you back a little — just enough to keep you on your toes.
           </p>
           <p>
-            It is where I apply and push everything I know: a GAS-driven NPC alert system,
-            a dual-layer weapon architecture, MetaSound-based audio, and modular hard-surface
-            weapons built in Blender.
+            It is where I apply and push everything I learned over the years — From both my work and my free time —
+            Everything code related is moslty in continuation of working as a Software Engineer.
+            3D Artist and desgin work is driven by my passion for video games.
+            Both of them are fueled by my curiosity and creativity.
           </p>
         </div>
 
@@ -151,14 +150,14 @@
             <div class="skills-group-label">[ ENGINE &amp; CODE ]</div>
             <div class="skills-tags">
               <span>Unreal Engine 5.7</span>
+              <span>JetBrains Rider</span>    
               <span>C++</span>
+              <span>Multiplayer</span>
               <span>Blueprint</span>
               <span>GAS</span>
               <span>Behavior Tree</span>
               <span>MetaSounds</span>
-              <span>Enhanced Input</span>
               <span>Mutable</span>
-              <span>Multiplayer / RPCs</span>
             </div>
           </div>
           <div class="skills-group">
@@ -167,6 +166,7 @@
               <span>Blender</span>
               <span>Substance Painter</span>
               <span>Hard Surface</span>
+              <span>Subd And Boolean workflows</span>
               <span>Clothing / Fabric</span>
               <span>Game-Ready Assets</span>
               <span>PBR Texturing</span>
@@ -180,6 +180,7 @@
               <span>Pacific Drive</span>
               <span>SCP Foundation</span>
               <span>Payday 2</span>
+              <span>GTFO</span>
               <span>CoD DMZ</span>
             </div>
           </div>
@@ -221,45 +222,9 @@
           </div>
         </button>
         <div class="accordion-body">
-          <div class="acc-content">
-            <div class="acc-text">
-              <p>
-                Dual-layer architecture separating data from visuals.
-                The <strong>UObject layer</strong> (WeaponObject stored in InventoryComponent) holds
-                all persistent stats, accessories, and ammo — never spawned into the world.
-                A parallel <strong>Actor layer</strong> (AWeapon) handles world-space visuals and
-                socket attachment to the character skeleton.
-              </p>
-              <p>
-                A <strong>WeaponComponent</strong> on the player acts as a runtime stats mirror —
-                damage, fire rate, fire mode, ammo counts — so GAS, UI, and AI all read from one
-                source without direct coupling to the raw weapon data object.
-              </p>
-              <ul class="acc-features">
-                <li>Fire modes — Single Shot / Burst / Automatic</li>
-                <li>Modular accessories — RIS rails, suppressors, scopes, stocks, magazines</li>
-                <li>Recoil via <code>UCurveVector</code> assets (camera + weapon bob, independently tuned)</li>
-                <li>Inventory → DataTable → WeaponObject creation pipeline</li>
-                <li>Save / load via custom <code>PlayerSave</code> serialization</li>
-                <li>MetaSound fire + tail assets with attenuation per weapon</li>
-              </ul>
-              <div class="acc-arch">
-                <div class="arch-row">
-                  <span class="arch-node">UWeaponObject</span>
-                  <span class="arch-arrow">→</span>
-                  <span class="arch-node">UInventoryComponent</span>
-                  <span class="arch-arrow">→</span>
-                  <span class="arch-node">AWeapon (Actor)</span>
-                </div>
-                <div class="arch-row">
-                  <span class="arch-node">AWeapon</span>
-                  <span class="arch-arrow">→</span>
-                  <span class="arch-node">UWeaponComponent (mirror)</span>
-                  <span class="arch-arrow">→</span>
-                  <span class="arch-node">GAS / UI / AI</span>
-                </div>
-              </div>
-            </div>
+          <div class="acc-summary">
+            <p>The weapon system is the backbone of Lowkey's gameplay loop — gunfeel is the first thing a player notices, and the last thing they forget. The architecture is built around that priority: modular meshes for full accessory customisation, and a deliberate split of responsibilities across multiple components — weapon data, runtime stats, recoil, and audio each handled separately. This keeps each layer clean and independently tunable.
+            </p>
             <div class="acc-media">
               <div class="media-slot">
                 <div class="media-slot-inner">
@@ -267,6 +232,49 @@
                   <span class="media-title">Weapon System Overview</span>
                   <span class="media-coming">— Placeholder —</span>
                 </div>
+              </div>
+            </div>
+          </div>
+          <div class="acc-implementations">
+            <div class="impl-label">[ IMPLEMENTATIONS ]</div>
+            <div class="impl-block">
+              <button class="impl-header" aria-expanded="false">
+                <span class="impl-arrow">⟩</span>
+                <span class="impl-title">Dual-Layer Data Architecture</span>
+                <span class="impl-toggle">+</span>
+              </button>
+              <div class="impl-body">
+                <p>Weapon data (stats, accessories, ammo count) lives as a lightweight UObject stored in the player's inventory — never spawned as a world Actor. When the player equips a weapon, a separate Actor is created and attached to the character skeleton solely for visual representation. This decoupling means dozens of inventory slots never flood the scene with Actors, and changing stats never requires touching the world mesh.</p>
+              </div>
+            </div>
+            <div class="impl-block">
+              <button class="impl-header" aria-expanded="false">
+                <span class="impl-arrow">⟩</span>
+                <span class="impl-title">Runtime Stats Mirror</span>
+                <span class="impl-toggle">+</span>
+              </button>
+              <div class="impl-body">
+                <p>A dedicated WeaponComponent on the player character acts as a runtime mirror of the currently equipped weapon's stats. When a weapon is equipped, its values are copied into the component. All other systems — UI, GAS abilities, fire logic — read from the component rather than from the weapon data object directly. This keeps the active-weapon query path fast and avoids coupling gameplay systems to inventory internals.</p>
+              </div>
+            </div>
+            <div class="impl-block">
+              <button class="impl-header" aria-expanded="false">
+                <span class="impl-arrow">⟩</span>
+                <span class="impl-title">Modular Accessory System</span>
+                <span class="impl-toggle">+</span>
+              </button>
+              <div class="impl-body">
+                <p>Accessories (suppressors, scopes, grips, stocks, magazines) are data objects attached to the weapon data layer. Swapping an accessory updates stats and signals a visual rebuild on the weapon Actor. This supports any combination of attachments without maintaining a combinatorial set of mesh variants — the visual representation assembles itself from socket-mounted parts at runtime based on what the weapon data holds.</p>
+              </div>
+            </div>
+            <div class="impl-block">
+              <button class="impl-header" aria-expanded="false">
+                <span class="impl-arrow">⟩</span>
+                <span class="impl-title">Curve-Based Recoil</span>
+                <span class="impl-toggle">+</span>
+              </button>
+              <div class="impl-body">
+                <p>Recoil patterns are authored as curve assets directly in the Unreal Editor — separate curves for camera movement and weapon kick. During fire, the system evaluates these curves in real time, producing patterns whose shape, timing, and recovery can be adjusted without any code changes. This is the core of what drives the tactile, controlled feel targeting the MW2019 gunfeel reference.</p>
               </div>
             </div>
           </div>
@@ -292,39 +300,25 @@
           </div>
         </button>
         <div class="accordion-body">
-          <div class="acc-content">
-            <div class="acc-text">
-              <p>
-                Fully server-authoritative NPC brain built around a
-                <strong>GAS-driven alert state machine</strong>. Detection level is a
-                Gameplay Attribute — incremented and decremented by custom Gameplay Effects
-                based on line-of-sight, distance, and elapsed time. No tick-polling.
-              </p>
-              <p>
-                Alert state transitions replicate to clients via
-                <code>ReplicatedAlertType</code> → <code>OnRep_AlertType</code>, syncing
-                world-space indicator widgets and sounds without authority concerns.
-              </p>
-              <div class="state-machine">
-                <span class="state state--calm">CALM</span>
-                <span class="state-arrow">→</span>
-                <span class="state state--suspicious">SUSPICIOUS</span>
-                <span class="state-arrow">→</span>
-                <span class="state state--patrol">PATROLLING</span>
-                <span class="state-arrow">→</span>
-                <span class="state state--combat">COMBAT</span>
+          <div class="acc-summary">
+            <div class="state-machine">
+              <span class="state state--patrol">PATROLLING</span>
+              <div class="sm-connector">
+                <span class="state-arrow state-arrow--fwd">→</span>
+                <span class="state-arrow state-arrow--rev">←</span>
               </div>
-              <ul class="acc-features">
-                <li><strong>AlertComponent</strong> — applies GE_AlertIncrease / GE_AlertDecrease, distance-scaled rate, view angle check</li>
-                <li>50% threshold locks Suspicious state — timed decay prevention prevents jitter</li>
-                <li>100% threshold → immediate Combat transition via max-alert delegate</li>
-                <li><strong>BTTask_LookAround</strong> — 3-phase scan ±60° at 90°/s, investigation on last-known location</li>
-                <li><strong>BTTask_ShootTarget</strong> — raycast-based (not projectile), configurable inaccuracy, burst fire support</li>
-                <li><strong>BTTask_ExitSuspicious</strong> — resets alert to 25%, returns to Roaming branch</li>
-                <li>Custom BT Decorators — <code>BTDecorator_CheckAlertState</code> (observer aborts), <code>BTDecorator_HasTarget</code></li>
-                <li>Sub-components: RoamingComponent (random patrol), CombatComponent, AlertComponent</li>
-              </ul>
+              <span class="state state--suspicious">SUSPICIOUS</span>
+              <div class="sm-connector">
+                <span class="state-arrow state-arrow--fwd">→</span>
+              </div>
+              <span class="state state--combat">COMBAT</span>
             </div>
+            <p>
+              NPCs in Lowkey are designed to be readable — predictable enough to reward careful planning, yet dangerous enough to punish mistakes.
+              Their implementation combines Behaviour Trees and GAS Abilities/Attributes.
+              NPCs work with limited information — sight and hearing only — and never have direct access to the player's position. They investigate before committing to combat.
+              In combat, they shoot, reposition actively, take cover to reload, and attempt to flush the player out of cover.
+            </p>
             <div class="acc-media">
               <div class="media-slot">
                 <div class="media-slot-inner">
@@ -332,6 +326,59 @@
                   <span class="media-title">Alert State Machine Demo</span>
                   <span class="media-coming">— Placeholder —</span>
                 </div>
+              </div>
+            </div>
+          </div>
+          <div class="acc-implementations">
+            <div class="impl-label">[ IMPLEMENTATIONS ]</div>
+            <div class="impl-block">
+              <button class="impl-header" aria-expanded="false">
+                <span class="impl-arrow">⟩</span>
+                <span class="impl-title">Continuous Detection Level</span>
+                <span class="impl-toggle">+</span>
+              </button>
+              <div class="impl-body">
+                <p>Detection is modelled as a continuous level that accumulates based on distance — decaying when the player is out of sight.
+                  State transitions only occur when this level crosses defined thresholds.
+                  An NPC at the edge of perception becomes suspicious; one with a clear line of sight for several seconds escalates to combat.
+                  The gradation makes NPCs feel like they're reasoning about partial information.
+                </p>
+              </div>
+            </div>
+            <div class="impl-block">
+              <button class="impl-header" aria-expanded="false">
+                <span class="impl-arrow">⟩</span>
+                <span class="impl-title">Threshold-Based State Transitions</span>
+                <span class="impl-toggle">+</span>
+              </button>
+              <div class="impl-body">
+                <p>Reaching 50% detection locks the NPC into Suspicious — decay is suppressed, committing the NPC to investigating rather than resetting.
+                  Reaching 100% triggers Combat.
+                  Exiting Suspicious resets the level to 25% rather than zero, preserving a baseline tension instead of returning to full calm.
+                  Each threshold is defined as a gameplay effect condition, making per-NPC-type tuning a data change rather than a code change.</p>
+              </div>
+            </div>
+            <div class="impl-block">
+              <button class="impl-header" aria-expanded="false">
+                <span class="impl-arrow">⟩</span>
+                <span class="impl-title">Suspicious Investigation Sequence</span>
+                <span class="impl-toggle">+</span>
+              </button>
+              <div class="impl-body">
+                <p>When entering Suspicious, the NPC stores the location of the detected stimulus and navigates toward it.
+                  On arrival, it executes a multi-phase scan — rotating through a wide arc at constant speed, pausing at extremes, then returning. If the player is spotted during this sequence, the state escalates; if the timer expires without detection, the NPC exits and partially resets. The scan angle, speed, and timeout are all configurable per NPC type.</p>
+              </div>
+            </div>
+            <div class="impl-block">
+              <button class="impl-header" aria-expanded="false">
+                <span class="impl-arrow">⟩</span>
+                <span class="impl-title">Behavior Tree as State Machine</span>
+                <span class="impl-toggle">+</span>
+              </button>
+              <div class="impl-body">
+                <p>Each alert state maps to a dedicated branch in the Behavior Tree, guarded by a custom decorator that observes the replicated state enum.
+                  When the state changes, the decorator aborts the currently running branch and redirects execution to the appropriate one.
+                </p>
               </div>
             </div>
           </div>
@@ -356,37 +403,58 @@
           </div>
         </button>
         <div class="accordion-body">
-          <div class="acc-content">
-            <div class="acc-text">
-              <p>
-                Custom <code>UAbilitySystemComponent</code> extended to expose
-                <code>SendLocalInputPressed / Released</code> to Blueprints, enabling
-                clean input-to-ability binding without native code per ability.
-              </p>
-              <p>
-                <strong>Player ASC</strong> lives on <code>ACustomPlayerState</code>
-                for persistence across respawns — initialized in
-                <code>PossessedBy</code> / <code>OnRep_PlayerState</code>.
-                <strong>NPC ASC</strong> lives directly on the Pawn
-                (<code>ABaseNPC</code>) for lighter overhead.
-              </p>
-              <ul class="acc-features">
-                <li><strong>CharacterAttributeSet</strong> — Health, MaxHealth (player + NPC)</li>
-                <li><strong>AlertAttributeSet</strong> — AlertLevel, MaxAlertLevel (NPC only) — drives full detection pipeline</li>
-                <li>Damage via <code>SetByCaller</code> with tag <code>Data.Damage</code></li>
-                <li>State tags — <code>Gameplay.State.IsADSing</code>, <code>IsFiring</code>, <code>IsReloading</code>, <code>IsInvisible</code>, <code>NPC.State.Blind</code></li>
-                <li><strong>FireWeaponAbility</strong> — integrates recoil system, ammo consumption, and network authority</li>
-                <li><strong>GA_NPCShoot</strong> — NPC-side GAS ability wrapping raycast fire logic</li>
-                <li>All attributes fully replicated with <code>OnRep_</code> callbacks</li>
-              </ul>
-            </div>
+          <div class="acc-summary">
+            <p>
+              GAS — despite its steep initial learning curve — handles replication, abilities, cooldowns, and blocking tags out of the box. In Lowkey, players and NPCs apply buffs and debuffs to each other through the same system. It is a natural fit for this kind of multi-actor interaction, and a great opportunity to build hands-on experience with an industry-standard approach.
+            </p>
             <div class="acc-media">
               <div class="media-slot">
                 <div class="media-slot-inner">
                   <span class="media-type">DIAGRAM</span>
-                  <span class="media-title">GAS Architecture Overview</span>
+                  <span class="media-title">GAS Architecture</span>
                   <span class="media-coming">— Placeholder —</span>
                 </div>
+              </div>
+            </div>
+          </div>
+          <div class="acc-implementations">
+            <div class="impl-label">[ IMPLEMENTATIONS ]</div>
+            <div class="impl-block">
+              <button class="impl-header" aria-expanded="false">
+                <span class="impl-arrow">⟩</span>
+                <span class="impl-title">Detection as a Gameplay Attribute</span>
+                <span class="impl-toggle">+</span>
+              </button>
+              <div class="impl-body">
+                <p>The NPC's detection level is a gameplay attribute — the same kind used for health and stamina.
+                  This means it replicates automatically, fires change callbacks at thresholds, and can be modified by effects with stacking, duration, and magnitude parameters.
+                  Applying detection is architecturally identical to applying damage: parameterised, stackable, and compatible with existing attribute system tooling at no extra implementation cost.
+                </p>
+              </div>
+            </div>
+            <div class="impl-block">
+              <button class="impl-header" aria-expanded="false">
+                <span class="impl-arrow">⟩</span>
+                <span class="impl-title">Gameplay Tags as State</span>
+                <span class="impl-toggle">+</span>
+              </button>
+              <div class="impl-body">
+                <p>States like currently aiming, reloading, or invisible are expressed as Gameplay Tags applied and removed by abilities.
+                  Any system that needs to check a state queries the tag container on the ability system component.
+                  This centralises state management, and allows tags to be observed reactively without polling.
+                </p>
+              </div>
+            </div>
+            <div class="impl-block">
+              <button class="impl-header" aria-expanded="false">
+                <span class="impl-arrow">⟩</span>
+                <span class="impl-title">Player Interactions through GAS</span>
+                <span class="impl-toggle">+</span>
+              </button>
+              <div class="impl-body">
+                <p>
+                  Shooting, picking up an item, reloading — all handled through Gameplay Abilities. The player blueprint stays clean — not bloated with custom logic — and adding new abilities requires no changes to the character class.
+                </p>
               </div>
             </div>
           </div>
@@ -406,40 +474,79 @@
               <span class="tag">Blueprint</span>
               <span class="tag">AnimGraph</span>
               <span class="tag">Curves</span>
+              <span class="tag">Control Rig</span>
               <span class="tag">Mutable</span>
             </div>
             <span class="acc-toggle">+</span>
           </div>
         </button>
         <div class="accordion-body">
-          <div class="acc-content">
-            <div class="acc-text">
-              <p>
-                State machine driven by Blueprint booleans (ADS, sprint, crouch, reload, fire)
-                feeding into an AnimGraph with per-layer blending.
-                First-person and third-person meshes are fully separate, each with
-                their own Animation Blueprint.
-              </p>
-              <p>
-                Weapon sway, bob, and recoil are <strong>curve-based</strong> —
-                authored directly in the Unreal editor as <code>UCurveVector</code> assets
-                and played back procedurally. This allows rapid per-weapon tuning to
-                match the tactile <em>MW2019</em> reference.
-              </p>
-              <ul class="acc-features">
-                <li>Camera recoil + weapon kick via <code>UCurveVector</code> playback, independently controllable</li>
-                <li>ADS blend with FOV transition curve</li>
-                <li>Sprint, crouch, idle, move state blending</li>
-                <li>Character bodies driven by <strong>Mutable plugin</strong> — runtime mesh customization</li>
-                <li>Hair via <code>UGroomComponent</code> (strand-based groom simulation)</li>
-              </ul>
-            </div>
+          <div class="acc-summary">
+            <p>
+              Animation in Lowkey blends procedural and baked approaches. Weapon sway, camera shake, and recoil motion are procedural — authored as curves and evaluated at runtime, making them reusable across any weapon with only data changes. More deliberate movements — idle stances, ADS transitions, reloads — use baked animations authored per weapon. Player and NPC locomotion use the Motion Matching component from UE5, with retargeted animations from the Unreal Game Animation Sample.
+            </p>
             <div class="acc-media">
               <div class="media-slot">
-                <div class="media-slot-inner">
-                  <span class="media-type">GIF</span>
-                  <span class="media-title">Recoil &amp; ADS Demo</span>
-                  <span class="media-coming">— Placeholder —</span>
+                <video src="assets/videos/Animation/ControlRigAG17.mp4" muted playsinline loop preload="metadata"></video>
+              </div>
+            </div>
+          </div>
+          <div class="acc-implementations">
+            <div class="impl-label">[ IMPLEMENTATIONS ]</div>
+            <div class="impl-block">
+              <button class="impl-header" aria-expanded="false">
+                <span class="impl-arrow">⟩</span>
+                <span class="impl-title">Curve-Based Recoil &amp; ADS</span>
+                <span class="impl-toggle">+</span>
+              </button>
+              <div class="impl-body">
+                <p>Camera and weapon motion during recoil and ADS transitions are driven by curve assets.
+                  This means the full shape of the motion — the initial kick, the settle, the recovery arc — is visible and editable in the curve editor without touching code. 
+                  Camera and weapon meshes each have independent curve sets, allowing the gun to move differently from the camera for a more natural result.</p>
+              </div>
+            </div>
+            <div class="impl-block">
+              <button class="impl-header" aria-expanded="false">
+                <span class="impl-arrow">⟩</span>
+                <span class="impl-title">Decoupled First & Third Person</span>
+                <span class="impl-toggle">+</span>
+              </button>
+              <div class="impl-body">
+                <p>The player character runs two completely separate skeletal instances and animation blueprints — one for the first-person hands and weapon visible only to the local player, and one for the full body visible to other players.
+                  This is standard practice: it allows for more visceral first-person animations without making the third-person ones janky.
+                  The first-person blueprint focuses on weapon handling and procedural overlays;
+                  the third-person blueprint handles locomotion and social gestures.</p>
+              </div>
+            </div>
+            <div class="impl-block">
+              <button class="impl-header" aria-expanded="false">
+                <span class="impl-arrow">⟩</span>
+                <span class="impl-title">Runtime Body Customisation via Mutable</span>
+                <span class="impl-toggle">+</span>
+              </button>
+              <div class="impl-body">
+                <p>Character bodies are not fixed skeletal meshes — they are assembled at runtime from modular components by the Mutable plugin.
+                  This enables equipment-driven appearance (armour slots, clothing, accessories) without maintaining a combinatorial explosion of mesh variants.
+                  The final mesh is generated at runtime based on whatever the character is currently wearing, and updating appearance is a data change rather than a mesh swap.</p>
+              </div>
+            </div>
+            <div class="impl-block">
+              <button class="impl-header" aria-expanded="false">
+                <span class="impl-arrow">⟩</span>
+                <span class="impl-title">Weapon Rigging — Control Rig</span>
+                <span class="impl-toggle">+</span>
+              </button>
+              <div class="impl-body">
+                <p>Weapon rigs are built directly inside Unreal Engine using Control Rig, avoiding the axis-convention issues that come with exporting animated skeletons from Blender. The AG17 rig drives rack, slide, hammer, and magazine release mechanics procedurally through the Control Rig node graph — each part is animated by solver logic rather than hand-keyed, so the motion stays physically plausible across any animation state. The bone hierarchy and solver graph are shown below.</p>
+                <div class="impl-gallery" data-gallery="anim-rig">
+                  <div class="gallery-item" data-gallery="anim-rig" data-index="0">
+                    <img src="assets/images/Animation/AG17%20RIG.png" alt="AG17 — Bone Hierarchy &amp; Rig Setup" loading="lazy">
+                    <div class="gallery-overlay"><span>Bone Hierarchy</span></div>
+                  </div>
+                  <div class="gallery-item" data-gallery="anim-rig" data-index="1">
+                    <img src="assets/images/Animation/AG17%20CR%20Logic.png" alt="AG17 — Control Rig Node Graph" loading="lazy">
+                    <div class="gallery-overlay"><span>Control Rig Graph</span></div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -465,21 +572,10 @@
           </div>
         </button>
         <div class="accordion-body">
-          <div class="acc-content">
-            <div class="acc-text">
-              <p>
-                Weapon audio managed through <strong>MetaSound</strong> graphs for
-                precise layering of fire, tail, and mechanical sounds.
-                MetaSound asset references, attenuation settings, and submix routing
-                are stored directly on <code>UWeaponComponent</code> — keeping audio
-                data co-located with the weapon stats it belongs to.
-              </p>
-              <ul class="acc-features">
-                <li>Per-weapon MetaSound assets — fire layer + tail layer independently authored</li>
-                <li>Attenuation and submix routing configurable per weapon in WeaponComponent</li>
-                <li>Multicast RPC ensures fire audio synchronization across all clients</li>
-              </ul>
-            </div>
+          <div class="acc-summary">
+            <p>
+              Weapon sounds in Lowkey are built from raw gunshot samples that are randomised, pitched, layered, and mixed inside MetaSound graphs to produce variation across fire events.
+            </p>
             <div class="acc-media">
               <div class="media-slot">
                 <div class="media-slot-inner">
@@ -487,6 +583,43 @@
                   <span class="media-title">MetaSound Graph Preview</span>
                   <span class="media-coming">— Placeholder —</span>
                 </div>
+              </div>
+            </div>
+          </div>
+          <div class="acc-implementations">
+            <div class="impl-label">[ IMPLEMENTATIONS ]</div>
+            <div class="impl-block">
+              <button class="impl-header" aria-expanded="false">
+                <span class="impl-arrow">⟩</span>
+                <span class="impl-title">Per-Weapon Audio Ownership</span>
+                <span class="impl-toggle">+</span>
+              </button>
+              <div class="impl-body">
+                <p>Each weapon uses a custom MetaSound template configured with its own input sounds and parameter values — allowing the same audio graph to produce anything from a lightweight pistol crack to a heavy rifle report without duplicating logic.
+                </p>
+              </div>
+            </div>
+            <div class="impl-block">
+              <button class="impl-header" aria-expanded="false">
+                <span class="impl-arrow">⟩</span>
+                <span class="impl-title">Layered Fire Sound Design</span>
+                <span class="impl-toggle">+</span>
+              </button>
+              <div class="impl-body">
+                <p>Weapon fire is split into multiple independent audio layers: the transient (the sharp crack and mechanical impact), the kick (the Umpf of the weapon hitting the player's body), the mechanics (Giving the weapon a more plastic or metalic sound depending on its components) and the tail (environmental decay and reverb).
+                  Separating them through different MetaSound Patches allows greater customisation and layering to get the weapon sound just right.</p>
+              </div>
+            </div>
+            <div class="impl-block">
+              <button class="impl-header" aria-expanded="false">
+                <span class="impl-arrow">⟩</span>
+                <span class="impl-title">Networked Audio Synchronisation</span>
+                <span class="impl-toggle">+</span>
+              </button>
+              <div class="impl-body">
+                <p>Since all fire logic originates and is validated on the server, fire events need to reach all connected clients simultaneously.
+                  A replication call broadcasts the event to every client at once, and each client triggers its own local audio playback on receipt.
+                </p>
               </div>
             </div>
           </div>
@@ -511,27 +644,9 @@
           </div>
         </button>
         <div class="accordion-body">
-          <div class="acc-content">
-            <div class="acc-text">
-              <p>
-                Cooperative architecture — strictly <strong>server-authoritative</strong>.
-                All gameplay decisions (NPC AI, damage, ability activation) execute on
-                the server; results replicate to clients through properties and RPCs.
-              </p>
-              <p>
-                Player GAS lives on <code>ACustomPlayerState</code> to survive
-                respawn cycles without ability loss. NPC AI runs
-                <strong>server-only</strong> on <code>ABaseNPCController</code>;
-                observable results (alert state, animation) replicate as needed.
-              </p>
-              <ul class="acc-features">
-                <li>NPC alert state replicated via <code>ReplicatedAlertType</code> + <code>OnRep_AlertType</code></li>
-                <li>GAS attributes fully replicated with client-side prediction</li>
-                <li>Multicast RPC for networked fire audio</li>
-                <li>Server RPCs for ability activation and weapon actions</li>
-                <li>Team system via <code>IGenericTeamAgentInterface</code> — Player / Monsters / PMC / Neutral</li>
-              </ul>
-            </div>
+          <div class="acc-summary">
+            <p>Lowkey follows the server authority model: the server owns all decisions, clients render results.
+              This keeps gameplay deterministic and consistent while keeping network traffic proportional to what players actually need to see.</p>
             <div class="acc-media">
               <div class="media-slot">
                 <div class="media-slot-inner">
@@ -539,6 +654,33 @@
                   <span class="media-title">Multiplayer CO-OP Session</span>
                   <span class="media-coming">— Placeholder —</span>
                 </div>
+              </div>
+            </div>
+          </div>
+          <div class="acc-implementations">
+            <div class="impl-label">[ IMPLEMENTATIONS ]</div>
+            <div class="impl-block">
+              <button class="impl-header" aria-expanded="false">
+                <span class="impl-arrow">⟩</span>
+                <span class="impl-title">Server-Only AI Execution</span>
+                <span class="impl-toggle">+</span>
+              </button>
+              <div class="impl-body">
+                <p>All NPC decision-making — perception, navigation, combat sequencing — runs exclusively on the server.
+                  Clients receive only the outputs: position, animation state, and alert level.
+                  NPCs have no autonomous behaviour on the client side, eliminating entire categories of desync and ensuring that detection, patrol routes, and combat outcomes are always consistent across all players in the session.</p>
+              </div>
+            </div>
+            <div class="impl-block">
+              <button class="impl-header" aria-expanded="false">
+                <span class="impl-arrow">⟩</span>
+                <span class="impl-title">GAS Replication Integration</span>
+                <span class="impl-toggle">+</span>
+              </button>
+              <div class="impl-body">
+                <p>The Gameplay Ability System manages its own replication layer.
+                  Attribute changes — health, alert level — propagate to all clients automatically without custom replication code.
+                </p>
               </div>
             </div>
           </div>
@@ -561,17 +703,18 @@
 
     <div class="container">
 
-      <!-- ─── WEAPONS GALLERY ─── -->
-      <div class="accordion-block" id="3d-weapons">
+      <!-- ─── 3D ART — ARSENAL & EQUIPMENT ─── -->
+      <div class="accordion-block" id="3d-art">
         <button class="accordion-header" aria-expanded="true">
           <div class="acc-left">
             <span class="acc-num">01</span>
             <span class="acc-arrow">⟩</span>
-            <span class="acc-title">WEAPONS — M4 MODULAR RIFLE</span>
+            <span class="acc-title">ARSENAL &amp; EQUIPMENT</span>
           </div>
           <div class="acc-right">
             <div class="acc-tags">
               <span class="tag">Blender</span>
+              <span class="tag">Nomad</span>
               <span class="tag">Substance Painter</span>
               <span class="tag">Hard Surface</span>
               <span class="tag">Game-Ready</span>
@@ -580,64 +723,269 @@
           </div>
         </button>
         <div class="accordion-body" style="display:block;">
-          <div class="acc-content acc-content--gallery">
-            <p class="gallery-desc">
-              Modular M4 / AR-15 platform built for Lowkey's weapon customization system.
-              Full accessory support — RIS rails, handguards, stocks, grips, suppressors,
-              scopes, multi-magazine variants. All components are game-ready
-              and socket-mountable in UE5.
+          <div class="acc-summary">
+            <p>All assets produced for Lowkey — weapons, optics, and tactical gear — are built to be both visually convincing and production-sound.
+              Every piece follows the same pipeline: direct-modelled in Blender, baked and textured in Substance Painter, then rigged and animated directly inside Unreal Engine 5.
+              
+              For some of them I have Airsoft references that I own, to helps me get things right.
+              For other I gather as much data as I can on their look and working to reproduce them as best as I can. 
             </p>
-            <div class="gallery-grid" id="gallery-weapons">
-              <div class="gallery-item" data-gallery="weapons" data-index="0">
-                <img src="assets/images/m4_render_1.png" alt="M4 Modular Rifle — Full Assembly" loading="lazy">
-                <div class="gallery-overlay"><span>M4 — Full Assembly</span></div>
-              </div>
-              <div class="gallery-item" data-gallery="weapons" data-index="1">
-                <img src="assets/images/m4_render_2.png" alt="M4 Modular Rifle — Exploded View" loading="lazy">
-                <div class="gallery-overlay"><span>M4 — Exploded Accessories</span></div>
-              </div>
-              <div class="gallery-item" data-gallery="weapons" data-index="2">
-                <img src="assets/images/m4_render_3.png" alt="M4 Rail System Detail" loading="lazy">
-                <div class="gallery-overlay"><span>Rail System Detail</span></div>
-              </div>
-              <div class="gallery-item" data-gallery="weapons" data-index="3">
-                <img src="assets/images/m4_render_4.png" alt="M4 Iron Sights" loading="lazy">
-                <div class="gallery-overlay"><span>Iron Sights Alignment</span></div>
-              </div>
-              <div class="gallery-item" data-gallery="weapons" data-index="4">
-                <img src="assets/images/m4_render_5.png" alt="M4 Magazines and Accessories" loading="lazy">
-                <div class="gallery-overlay"><span>Magazines &amp; Attachments</span></div>
+            <div class="acc-media">
+              <div class="media-slot">
+                <img src="assets/images/3d/ag17_render_1.png" alt="AG17 — Modernized G17" loading="lazy">
               </div>
             </div>
           </div>
-        </div>
-      </div>
+          <div class="acc-implementations">
+            <p class="impl-label">[ ABOUT ]</p>
 
-      <!-- ─── PROPS / ENVIRONMENT ─── -->
-      <div class="accordion-block" id="3d-props">
-        <button class="accordion-header" aria-expanded="false">
-          <div class="acc-left">
-            <span class="acc-num">02</span>
-            <span class="acc-arrow">⟩</span>
-            <span class="acc-title">ENVIRONMENT &amp; PROPS</span>
-          </div>
-          <div class="acc-right">
-            <div class="acc-tags">
-              <span class="tag">Blender</span>
-              <span class="tag">Substance Painter</span>
+            <!-- Approach -->
+            <div class="impl-block">
+              <button class="impl-header" aria-expanded="false">
+                <span class="impl-arrow">⟩</span>
+                <span class="impl-title">Approach &amp; Experience</span>
+                <span class="impl-toggle">+</span>
+              </button>
+              <div class="impl-body">
+                <p>The goal is always assets that hold up both visually and technically — credible surface quality with a polygon count and texture budget suited to a multiplayer session. Hard-surface work is the core focus, but sculpting is part of the pipeline wherever it matters: clothing, fabric, and layered tactical gear are roughed out in Blender or Nomad Sculpt, with subdivision and displacement doing the heavy lifting before baking to the game mesh.</p>
+                <p>Texturing happens entirely in Substance Painter, built up layer by layer — curvature-driven dirt, procedural wear, cavity shading, and hand-painted detail all converging into a single coherent PBR result. The approach is non-destructive throughout: layer groups stay intact, masks stay editable, and nothing gets flattened until export.</p>
+              </div>
             </div>
-            <span class="acc-toggle">+</span>
-          </div>
-        </button>
-        <div class="accordion-body">
-          <div class="acc-content acc-content--gallery">
-            <p class="gallery-desc">
-              Environment assets and props for Lowkey's derelict, anomaly-ridden settings —
-              abandoned industrial zones, strange artifacts, degraded infrastructure.
-            </p>
-            <div class="gallery-placeholder">
-              <span class="gallery-placeholder-text">[ ASSETS COMING SOON ]</span>
+
+            <!-- Software -->
+            <div class="impl-block">
+              <button class="impl-header" aria-expanded="false">
+                <span class="impl-arrow">⟩</span>
+                <span class="impl-title">Tools &amp; Software</span>
+                <span class="impl-toggle">+</span>
+              </button>
+              <div class="impl-body">
+                <p><strong>Blender</strong> with HardOps and BoxCutter for hard-surface acceleration, and RetopoFlow for clean retopology on organic surfaces. <strong>Nomad Sculpt</strong> on a Surface Pro for sculpting sessions on the go — especially useful for clothing and fabric before the retopology pass. <strong>Substance Painter</strong> for PBR texturing, with a library of custom Smart Materials built around specific surface types (military nylon, anodised metal, worn polymer). <strong>Unreal Engine 5.7</strong> for rigging, Control Rig setups, and animation — keeping everything in-engine to avoid axis issues from Blender export.</p>
+                <p>Projects are kept on a shared cloud drive so work moves seamlessly between the desktop workstation and the Surface Pro — desktop for heavy modelling sessions, Surface Pro for sculpting and concept work anywhere.</p>
+              </div>
             </div>
+
+            <!-- Pipeline -->
+            <div class="impl-block">
+              <button class="impl-header" aria-expanded="false">
+                <span class="impl-arrow">⟩</span>
+                <span class="impl-title">Hard Surface Pipeline</span>
+                <span class="impl-toggle">+</span>
+              </button>
+              <div class="impl-body">
+                <p>High-poly and low-poly are produced simultaneously in a single Blender file. The low-poly is direct-modelled to hold its own as a standalone mesh — enough geometry to read cleanly with no visible faceting, correct proportions from every angle. The high-poly is a modifier stack layered on top: Subdivision and Bevels tighten the silhouette and sharpen the edges for a crisper bake. UVs, seams, and Color IDs are set up at this stage while everything is still live.</p>
+                <p>When ready, the mesh is duplicated into two export objects — <code>_high</code> (modifiers applied) and <code>_low</code> (clean base) — which go straight into Substance Painter for baking. Once textures are complete, rigging and animation are done inside Unreal Engine using Control Rig, eliminating the axis-convention headaches that come with exporting animated skeletons from Blender.</p>
+              </div>
+            </div>
+
+            <p class="impl-label" style="margin-top: 1.4rem;">[ PORTFOLIO ]</p>
+
+            <!-- M4 Carbine -->
+            <div class="impl-block">
+              <button class="impl-header" aria-expanded="false">
+                <span class="impl-arrow">⟩</span>
+                <span class="impl-title">M4 Carbine — Modular Assault Rifle</span>
+                <span class="impl-toggle">+</span>
+              </button>
+              <div class="impl-body">
+                <p>Full modular AR-15/M4 platform. Built with a component-based structure matching the in-game attachment system: RIS rail, handguard, stock, pistol grip, suppressor.
+                All parts are socket-mountable in UE5
+                As one of my first model, I had not figured out the low to high_poly workflow yet.
+                This weapon doesn't have the same amount of detail that the MP5 or G17 have and the mesh flow is messy due to the use of many booleans — This gun being my first experience with HardOps/BoxCutter. 
+                </p>
+                <div class="impl-gallery" data-gallery="m4">
+                  <div class="gallery-item" data-gallery="m4" data-index="0">
+                    <img src="assets/images/m4_render_1.png" alt="M4 — Full Assembly" loading="lazy">
+                    <div class="gallery-overlay"><span>Full Assembly</span></div>
+                  </div>
+                  <div class="gallery-item" data-gallery="m4" data-index="1">
+                    <img src="assets/images/m4_render_2.png" alt="M4 — Exploded View" loading="lazy">
+                    <div class="gallery-overlay"><span>Exploded Accessories</span></div>
+                  </div>
+                  <div class="gallery-item" data-gallery="m4" data-index="2">
+                    <img src="assets/images/m4_render_3.png" alt="M4 — Rail Detail" loading="lazy">
+                    <div class="gallery-overlay"><span>Rail System Detail</span></div>
+                  </div>
+                  <div class="gallery-item" data-gallery="m4" data-index="3">
+                    <img src="assets/images/m4_render_4.png" alt="M4 — Iron Sights" loading="lazy">
+                    <div class="gallery-overlay"><span>Iron Sights</span></div>
+                  </div>
+                  <div class="gallery-item" data-gallery="m4" data-index="4">
+                    <img src="assets/images/m4_render_5.png" alt="M4 — Magazines" loading="lazy">
+                    <div class="gallery-overlay"><span>Magazines &amp; Attachments</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- AG17 -->
+            <div class="impl-block">
+              <button class="impl-header" aria-expanded="false">
+                <span class="impl-arrow">⟩</span>
+                <span class="impl-title">AG17 — Modernized G17</span>
+                <span class="impl-toggle">+</span>
+              </button>
+              <div class="impl-body">
+                <p>A modernised G17-based platform with extended frame, accessory rail, and threaded barrel. Modelled with accurate internal geometry — slide, frame, barrel, and feed ramp are all correctly proportioned to support the rack-and-slide animation built in UE5. The wireframe shows the edge loop strategy used to keep the silhouette clean at game-ready polygon density.</p>
+                <div class="impl-gallery" data-gallery="ag17">
+                  <div class="gallery-item" data-gallery="ag17" data-index="0">
+                    <img src="assets/images/3d/ag17_render_1.png" alt="AG17 — Global View 1" loading="lazy">
+                    <div class="gallery-overlay"><span>Global View</span></div>
+                  </div>
+                  <div class="gallery-item" data-gallery="ag17" data-index="1">
+                    <img src="assets/images/3d/ag17_render_2.png" alt="AG17 — Global View 2" loading="lazy">
+                    <div class="gallery-overlay"><span>Detail View</span></div>
+                  </div>
+                  <div class="gallery-item" data-gallery="ag17" data-index="2">
+                    <img src="assets/images/3d/ag17_wireframe.png" alt="AG17 — Wireframe" loading="lazy">
+                    <div class="gallery-overlay"><span>Wireframe</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- G17 -->
+            <div class="impl-block">
+              <button class="impl-header" aria-expanded="false">
+                <span class="impl-arrow">⟩</span>
+                <span class="impl-title">G17 — Service Pistol</span>
+                <span class="impl-toggle">+</span>
+              </button>
+              <div class="impl-body">
+                <p>Secondary sidearm. Modelled from reference with accurate proportions and internal geometry.</p>
+                <div class="impl-gallery" data-gallery="g17">
+                  <div class="gallery-item" data-gallery="g17" data-index="0">
+                    <img src="assets/images/3d/g17_render_1.png" alt="G17 — Global View" loading="lazy">
+                    <div class="gallery-overlay"><span>Global View</span></div>
+                  </div>
+                  <div class="gallery-item" data-gallery="g17" data-index="1">
+                    <img src="assets/images/3d/g17_render_2.png" alt="G17 — Angle View" loading="lazy">
+                    <div class="gallery-overlay"><span>Angle View</span></div>
+                  </div>
+                  <div class="gallery-item" data-gallery="g17" data-index="2">
+                    <img src="assets/images/3d/g17_wireframe.png" alt="G17 — Wireframe" loading="lazy">
+                    <div class="gallery-overlay"><span>Wireframe</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- MP5 -->
+            <div class="impl-block">
+              <button class="impl-header" aria-expanded="false">
+                <span class="impl-arrow">⟩</span>
+                <span class="impl-title">MP5 — Submachine Gun</span>
+                <span class="impl-toggle">+</span>
+              </button>
+              <div class="impl-body">
+                <p>Compact SMG Modelled with accurate proportions from reference.
+                  Texture work focuses on the worn polymer and oily drips from the mechanic and use.
+                  In this case I used a dense topology for the handguard bevel which could be argued against.
+                  The barrel hole could also receive some slight improvement with a smaller inner vertex count.
+                </p>
+                <div class="impl-gallery" data-gallery="mp5">
+                  <div class="gallery-item" data-gallery="mp5" data-index="0">
+                    <img src="assets/images/3d/mp5_render_1.png" alt="MP5 — Global View" loading="lazy">
+                    <div class="gallery-overlay"><span>Global View</span></div>
+                  </div>
+                  <div class="gallery-item" data-gallery="mp5" data-index="1">
+                    <img src="assets/images/3d/mp5_render_2.png" alt="MP5 — Detail View" loading="lazy">
+                    <div class="gallery-overlay"><span>Detail View</span></div>
+                  </div>
+                  <div class="gallery-item" data-gallery="mp5" data-index="2">
+                    <img src="assets/images/3d/mp5_wireframe_1.png" alt="MP5 — Wireframe 1" loading="lazy">
+                    <div class="gallery-overlay"><span>Wireframe — Side</span></div>
+                  </div>
+                  <div class="gallery-item" data-gallery="mp5" data-index="3">
+                    <img src="assets/images/3d/mp5_wireframe_2.png" alt="MP5 — Wireframe 2" loading="lazy">
+                    <div class="gallery-overlay"><span>Wireframe — Angle</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Holographic Sight -->
+            <div class="impl-block">
+              <button class="impl-header" aria-expanded="false">
+                <span class="impl-arrow">⟩</span>
+                <span class="impl-title">Holographic Sight — Weapon Accessory</span>
+                <span class="impl-toggle">+</span>
+              </button>
+              <div class="impl-body">
+                <p>Rail-mounted holographic optic. The reticle is a separate mesh to support projection material in UE5;</p>
+                <div class="impl-gallery" data-gallery="holo">
+                  <div class="gallery-item" data-gallery="holo" data-index="0">
+                    <img src="assets/images/3d/holo_render_1.png" alt="Holographic Sight — Front View" loading="lazy">
+                    <div class="gallery-overlay"><span>Front View</span></div>
+                  </div>
+                  <div class="gallery-item" data-gallery="holo" data-index="1">
+                    <img src="assets/images/3d/holo_render_2.png" alt="Holographic Sight — Side View" loading="lazy">
+                    <div class="gallery-overlay"><span>Side View</span></div>
+                  </div>
+                  <div class="gallery-item" data-gallery="holo" data-index="2">
+                    <img src="assets/images/3d/holo_render_3.png" alt="Holographic Sight — Angle View" loading="lazy">
+                    <div class="gallery-overlay"><span>Angle View</span></div>
+                  </div>
+                  <div class="gallery-item" data-gallery="holo" data-index="3">
+                    <img src="assets/images/3d/holo_wireframe.png" alt="Holographic Sight — Wireframe" loading="lazy">
+                    <div class="gallery-overlay"><span>Wireframe</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Chest Rig -->
+            <div class="impl-block">
+              <button class="impl-header" aria-expanded="false">
+                <span class="impl-arrow">⟩</span>
+                <span class="impl-title">Chest Rig — Tactical Gear</span>
+                <span class="impl-toggle">+</span>
+              </button>
+              <div class="impl-body">
+                <p>Soft-body tactical chest rig with magazine pouches and MOLLE attachment webbing. The base structure is hard-surface modelled, while the fabric panels and strap geometry were sculpted to get natural drape and crease patterns.</p>
+                <div class="impl-gallery" data-gallery="chestrig">
+                  <div class="gallery-item" data-gallery="chestrig" data-index="0">
+                    <img src="assets/images/3d/chestrig_render_1.png" alt="Chest Rig — Front View" loading="lazy">
+                    <div class="gallery-overlay"><span>Front View</span></div>
+                  </div>
+                  <div class="gallery-item" data-gallery="chestrig" data-index="1">
+                    <img src="assets/images/3d/chestrig_render_2.png" alt="Chest Rig — Detail" loading="lazy">
+                    <div class="gallery-overlay"><span>Detail View</span></div>
+                  </div>
+                  <div class="gallery-item" data-gallery="chestrig" data-index="2">
+                    <img src="assets/images/3d/chestrig_wireframe.png" alt="Chest Rig — Wireframe" loading="lazy">
+                    <div class="gallery-overlay"><span>Wireframe</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Gloves -->
+            <div class="impl-block">
+              <button class="impl-header" aria-expanded="false">
+                <span class="impl-arrow">⟩</span>
+                <span class="impl-title">Tactical Gloves — First-Person Hand Asset</span>
+                <span class="impl-toggle">+</span>
+              </button>
+              <div class="impl-body">
+                <p>Older asset used for the gloves currently being remade with better support eges for deformation during interactions. </p>
+                <div class="impl-gallery" data-gallery="gloves">
+                  <div class="gallery-item" data-gallery="gloves" data-index="0">
+                    <img src="assets/images/3d/gloves_render_1.png" alt="Tactical Gloves — Palm View" loading="lazy">
+                    <div class="gallery-overlay"><span>Palm View</span></div>
+                  </div>
+                  <div class="gallery-item" data-gallery="gloves" data-index="1">
+                    <img src="assets/images/3d/gloves_render_2.png" alt="Tactical Gloves — Back View" loading="lazy">
+                    <div class="gallery-overlay"><span>Back View</span></div>
+                  </div>
+                  <div class="gallery-item" data-gallery="gloves" data-index="2">
+                    <img src="assets/images/3d/gloves_wireframe.png" alt="Tactical Gloves — Wireframe" loading="lazy">
+                    <div class="gallery-overlay"><span>Wireframe</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -661,7 +1009,7 @@
         Open to opportunities in game development — as programmer, technical artist, or both.
       </p>
       <div class="contact-grid">
-        <a href="https://github.com/" class="contact-card" target="_blank" rel="noopener">
+        <a href="https://github.com/" class="contact-card" target="https://github.com/Kernivel" rel="noopener">
           <div class="contact-card-corner tl"></div>
           <div class="contact-card-corner br"></div>
           <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -671,7 +1019,7 @@
           <div class="contact-sub">Source &amp; Projects</div>
         </a>
 
-        <a href="https://linkedin.com/" class="contact-card" target="_blank" rel="noopener">
+        <a href="https://linkedin.com/" class="contact-card" target="https://www.linkedin.com/in/hugo-revois/" rel="noopener">
           <div class="contact-card-corner tl"></div>
           <div class="contact-card-corner br"></div>
           <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -681,7 +1029,7 @@
           <div class="contact-sub">Professional Profile</div>
         </a>
 
-        <a href="mailto:contact@example.com" class="contact-card">
+        <a href="mailto:hugorevois+contact@gmail.com" class="contact-card">
           <div class="contact-card-corner tl"></div>
           <div class="contact-card-corner br"></div>
           <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
@@ -697,9 +1045,9 @@
   <!-- ═══════════════════════════════════ FOOTER ═══════════════════════════════════ -->
   <footer id="footer">
     <div class="footer-inner">
-      <span class="footer-logo">[LOWKEY]</span>
+      <span class="footer-logo">LOWKEY</span>
       <span class="footer-sep">·</span>
-      <span class="footer-sub">Tactical Horror FPS · Built with Unreal Engine 5.7</span>
+      <span class="footer-sub">Tactical Horror FPS · Built in Unreal Engine 5</span>
       <span class="footer-sep footer-sep--right">·</span>
       <span class="footer-year" id="footerYear"></span>
     </div>
