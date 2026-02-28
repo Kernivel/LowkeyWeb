@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LOWKEY — Tactical Horror FPS · Portfolio</title>
+  <meta name="description" content="Portfolio of a UE5 C++ developer and 3D artist building Lowkey, a cooperative tactical horror FPS.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════ NAVBAR ═══════════════════════════════════ -->
+  <nav id="navbar">
+    <div class="nav-container">
+
+      <a href="#hero" class="nav-logo">
+        <span class="nav-logo-bracket">[</span>LOWKEY<span class="nav-logo-bracket">]</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">ABOUT</a></li>
+
+        <li class="has-dropdown">
+          <a href="#systems" class="nav-link nav-link--dropdown">
+            UE5 SYSTEMS <span class="nav-chevron">▾</span>
+          </a>
+          <div class="nav-dropdown">
+            <a href="#system-weapons">Weapon System</a>
+            <a href="#system-ai">NPC · AI</a>
+            <a href="#system-gas">Gameplay Ability System</a>
+            <a href="#system-animation">Animation</a>
+            <a href="#system-audio">Audio · MetaSounds</a>
+            <a href="#system-network">Networking</a>
+          </div>
+        </li>
+
+        <li class="has-dropdown">
+          <a href="#work3d" class="nav-link nav-link--dropdown">
+            3D WORK <span class="nav-chevron">▾</span>
+          </a>
+          <div class="nav-dropdown">
+            <a href="#3d-weapons">Weapons</a>
+            <a href="#3d-props">Environment &amp; Props</a>
+          </div>
+        </li>
+
+        <li><a href="#contact" class="nav-link">CONTACT</a></li>
+      </ul>
+
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════ HERO ═════════════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-bg">
+      <div class="hero-grid"></div>
+      <div class="hero-vignette"></div>
+      <div class="hero-scanlines"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-tag">
+        <span class="tag-dot"></span>
+        TACTICAL HORROR FPS · UNREAL ENGINE 5.7 · CO-OP
+      </div>
+
+      <h1 class="hero-title">LOWKEY</h1>
+
+      <p class="hero-sub">
+        Game Developer &amp; 3D Artist
+      </p>
+
+      <p class="hero-desc">
+        Cooperative extraction horror built on Unreal Engine 5.7.<br>
+        Modern gunfeel. Comsmic Horror & anomalies.
+      </p>
+
+      <div class="hero-cta">
+        <a href="#systems" class="btn-primary">EXPLORE SYSTEMS</a>
+        <a href="#work3d" class="btn-ghost">VIEW 3D WORK</a>
+      </div>
+
+      <div class="hero-data-row">
+        <span class="hero-data-item"><span class="hero-data-label">ENGINE</span> UE 5.7</span>
+        <span class="hero-data-sep">·</span>
+        <span class="hero-data-item"><span class="hero-data-label">LANG</span> C++ / Blueprint</span>
+        <span class="hero-data-sep">·</span>
+        <span class="hero-data-item"><span class="hero-data-label">MODE</span> CO-OP</span>
+        <span class="hero-data-sep">·</span>
+        <span class="hero-data-item"><span class="hero-data-label">STATUS</span> <span class="status-active">IN DEV</span></span>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <span>SCROLL</span>
+      <div class="hero-scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ ABOUT ════════════════════════════════════ -->
+  <section id="about">
+    <div class="section-header">
+      <div class="section-line"></div>
+      <div class="section-label">
+        <span class="section-num">[ 01 ]</span>
+        <h2 class="section-title">ABOUT</h2>
+      </div>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="container">
+      <div class="about-grid">
+
+        <div class="about-bio">
+          <h3 class="about-heading">UE5 Developer &amp; 3D Artist</h3>
+          <p>
+            I build game systems from the ground up — C++ architectures in Unreal Engine 5,
+            AI behaviors, ability pipelines, and networked gameplay — alongside the 3D assets
+            that bring them to life. Hard-surface modelling, PBR texturing, and game-ready
+            production in Blender and Substance Painter.
+          </p>
+          <p>
+            My work sits at the intersection of tech and art: I implement the systems,
+            then model and texture the assets they depend on — from weapon mechanics
+            to the gun in the player's hands.
+          </p>
+          <p>
+            <strong>Lowkey</strong> — my current project — is a cooperative tactical horror FPS
+            with a strong focus on gunplay and atmosphere, set in an SCP-like universe.
+            The game revolves around hunting down artifacts and anomalies as part of a co-op
+            extraction loop — where players drop into degraded environments, recover high-value
+            artefacts, and extract alive. Artefacts fund new equipment and unlock crafted
+            abilities. Losing will set you back a little — just enough to keep you on your toes.
+          </p>
+          <p>
+            It is where I apply and push everything I know: a GAS-driven NPC alert system,
+            a dual-layer weapon architecture, MetaSound-based audio, and modular hard-surface
+            weapons built in Blender.
+          </p>
+        </div>
+
+        <div class="about-skills">
+          <div class="skills-group">
+            <div class="skills-group-label">[ ENGINE &amp; CODE ]</div>
+            <div class="skills-tags">
+              <span>Unreal Engine 5.7</span>
+              <span>C++</span>
+              <span>Blueprint</span>
+              <span>GAS</span>
+              <span>Behavior Tree</span>
+              <span>MetaSounds</span>
+              <span>Enhanced Input</span>
+              <span>Mutable</span>
+              <span>Multiplayer / RPCs</span>
+            </div>
+          </div>
+          <div class="skills-group">
+            <div class="skills-group-label">[ 3D &amp; ART ]</div>
+            <div class="skills-tags">
+              <span>Blender</span>
+              <span>Substance Painter</span>
+              <span>Hard Surface</span>
+              <span>Clothing / Fabric</span>
+              <span>Game-Ready Assets</span>
+              <span>PBR Texturing</span>
+            </div>
+          </div>
+          <div class="skills-group">
+            <div class="skills-group-label">[ INSPIRATIONS ]</div>
+            <div class="skills-tags ochre">
+              <span>MW2019</span>
+              <span>Stalker 2</span>
+              <span>Pacific Drive</span>
+              <span>SCP Foundation</span>
+              <span>Payday 2</span>
+              <span>CoD DMZ</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ UE5 SYSTEMS ══════════════════════════════ -->
+  <section id="systems">
+    <div class="section-header">
+      <div class="section-line"></div>
+      <div class="section-label">
+        <span class="section-num">[ 02 ]</span>
+        <h2 class="section-title">UE5 SYSTEMS</h2>
+      </div>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="container">
+
+      <!-- ─── WEAPON SYSTEM ─── -->
+      <div class="accordion-block" id="system-weapons">
+        <button class="accordion-header" aria-expanded="false">
+          <div class="acc-left">
+            <span class="acc-num">01</span>
+            <span class="acc-arrow">⟩</span>
+            <span class="acc-title">WEAPON SYSTEM</span>
+          </div>
+          <div class="acc-right">
+            <div class="acc-tags">
+              <span class="tag">C++</span>
+              <span class="tag">UObject</span>
+              <span class="tag">DataTable</span>
+              <span class="tag">MetaSounds</span>
+            </div>
+            <span class="acc-toggle">+</span>
+          </div>
+        </button>
+        <div class="accordion-body">
+          <div class="acc-content">
+            <div class="acc-text">
+              <p>
+                Dual-layer architecture separating data from visuals.
+                The <strong>UObject layer</strong> (WeaponObject stored in InventoryComponent) holds
+                all persistent stats, accessories, and ammo — never spawned into the world.
+                A parallel <strong>Actor layer</strong> (AWeapon) handles world-space visuals and
+                socket attachment to the character skeleton.
+              </p>
+              <p>
+                A <strong>WeaponComponent</strong> on the player acts as a runtime stats mirror —
+                damage, fire rate, fire mode, ammo counts — so GAS, UI, and AI all read from one
+                source without direct coupling to the raw weapon data object.
+              </p>
+              <ul class="acc-features">
+                <li>Fire modes — Single Shot / Burst / Automatic</li>
+                <li>Modular accessories — RIS rails, suppressors, scopes, stocks, magazines</li>
+                <li>Recoil via <code>UCurveVector</code> assets (camera + weapon bob, independently tuned)</li>
+                <li>Inventory → DataTable → WeaponObject creation pipeline</li>
+                <li>Save / load via custom <code>PlayerSave</code> serialization</li>
+                <li>MetaSound fire + tail assets with attenuation per weapon</li>
+              </ul>
+              <div class="acc-arch">
+                <div class="arch-row">
+                  <span class="arch-node">UWeaponObject</span>
+                  <span class="arch-arrow">→</span>
+                  <span class="arch-node">UInventoryComponent</span>
+                  <span class="arch-arrow">→</span>
+                  <span class="arch-node">AWeapon (Actor)</span>
+                </div>
+                <div class="arch-row">
+                  <span class="arch-node">AWeapon</span>
+                  <span class="arch-arrow">→</span>
+                  <span class="arch-node">UWeaponComponent (mirror)</span>
+                  <span class="arch-arrow">→</span>
+                  <span class="arch-node">GAS / UI / AI</span>
+                </div>
+              </div>
+            </div>
+            <div class="acc-media">
+              <div class="media-slot">
+                <div class="media-slot-inner">
+                  <span class="media-type">VIDEO</span>
+                  <span class="media-title">Weapon System Overview</span>
+                  <span class="media-coming">— Placeholder —</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ─── AI / NPC ─── -->
+      <div class="accordion-block" id="system-ai">
+        <button class="accordion-header" aria-expanded="false">
+          <div class="acc-left">
+            <span class="acc-num">02</span>
+            <span class="acc-arrow">⟩</span>
+            <span class="acc-title">NPC · AI SYSTEM</span>
+          </div>
+          <div class="acc-right">
+            <div class="acc-tags">
+              <span class="tag">C++</span>
+              <span class="tag">Behavior Tree</span>
+              <span class="tag">GAS</span>
+              <span class="tag">Multiplayer</span>
+            </div>
+            <span class="acc-toggle">+</span>
+          </div>
+        </button>
+        <div class="accordion-body">
+          <div class="acc-content">
+            <div class="acc-text">
+              <p>
+                Fully server-authoritative NPC brain built around a
+                <strong>GAS-driven alert state machine</strong>. Detection level is a
+                Gameplay Attribute — incremented and decremented by custom Gameplay Effects
+                based on line-of-sight, distance, and elapsed time. No tick-polling.
+              </p>
+              <p>
+                Alert state transitions replicate to clients via
+                <code>ReplicatedAlertType</code> → <code>OnRep_AlertType</code>, syncing
+                world-space indicator widgets and sounds without authority concerns.
+              </p>
+              <div class="state-machine">
+                <span class="state state--calm">CALM</span>
+                <span class="state-arrow">→</span>
+                <span class="state state--suspicious">SUSPICIOUS</span>
+                <span class="state-arrow">→</span>
+                <span class="state state--patrol">PATROLLING</span>
+                <span class="state-arrow">→</span>
+                <span class="state state--combat">COMBAT</span>
+              </div>
+              <ul class="acc-features">
+                <li><strong>AlertComponent</strong> — applies GE_AlertIncrease / GE_AlertDecrease, distance-scaled rate, view angle check</li>
+                <li>50% threshold locks Suspicious state — timed decay prevention prevents jitter</li>
+                <li>100% threshold → immediate Combat transition via max-alert delegate</li>
+                <li><strong>BTTask_LookAround</strong> — 3-phase scan ±60° at 90°/s, investigation on last-known location</li>
+                <li><strong>BTTask_ShootTarget</strong> — raycast-based (not projectile), configurable inaccuracy, burst fire support</li>
+                <li><strong>BTTask_ExitSuspicious</strong> — resets alert to 25%, returns to Roaming branch</li>
+                <li>Custom BT Decorators — <code>BTDecorator_CheckAlertState</code> (observer aborts), <code>BTDecorator_HasTarget</code></li>
+                <li>Sub-components: RoamingComponent (random patrol), CombatComponent, AlertComponent</li>
+              </ul>
+            </div>
+            <div class="acc-media">
+              <div class="media-slot">
+                <div class="media-slot-inner">
+                  <span class="media-type">VIDEO</span>
+                  <span class="media-title">Alert State Machine Demo</span>
+                  <span class="media-coming">— Placeholder —</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ─── GAS ─── -->
+      <div class="accordion-block" id="system-gas">
+        <button class="accordion-header" aria-expanded="false">
+          <div class="acc-left">
+            <span class="acc-num">03</span>
+            <span class="acc-arrow">⟩</span>
+            <span class="acc-title">GAMEPLAY ABILITY SYSTEM</span>
+          </div>
+          <div class="acc-right">
+            <div class="acc-tags">
+              <span class="tag">GAS</span>
+              <span class="tag">C++</span>
+              <span class="tag">Multiplayer</span>
+            </div>
+            <span class="acc-toggle">+</span>
+          </div>
+        </button>
+        <div class="accordion-body">
+          <div class="acc-content">
+            <div class="acc-text">
+              <p>
+                Custom <code>UAbilitySystemComponent</code> extended to expose
+                <code>SendLocalInputPressed / Released</code> to Blueprints, enabling
+                clean input-to-ability binding without native code per ability.
+              </p>
+              <p>
+                <strong>Player ASC</strong> lives on <code>ACustomPlayerState</code>
+                for persistence across respawns — initialized in
+                <code>PossessedBy</code> / <code>OnRep_PlayerState</code>.
+                <strong>NPC ASC</strong> lives directly on the Pawn
+                (<code>ABaseNPC</code>) for lighter overhead.
+              </p>
+              <ul class="acc-features">
+                <li><strong>CharacterAttributeSet</strong> — Health, MaxHealth (player + NPC)</li>
+                <li><strong>AlertAttributeSet</strong> — AlertLevel, MaxAlertLevel (NPC only) — drives full detection pipeline</li>
+                <li>Damage via <code>SetByCaller</code> with tag <code>Data.Damage</code></li>
+                <li>State tags — <code>Gameplay.State.IsADSing</code>, <code>IsFiring</code>, <code>IsReloading</code>, <code>IsInvisible</code>, <code>NPC.State.Blind</code></li>
+                <li><strong>FireWeaponAbility</strong> — integrates recoil system, ammo consumption, and network authority</li>
+                <li><strong>GA_NPCShoot</strong> — NPC-side GAS ability wrapping raycast fire logic</li>
+                <li>All attributes fully replicated with <code>OnRep_</code> callbacks</li>
+              </ul>
+            </div>
+            <div class="acc-media">
+              <div class="media-slot">
+                <div class="media-slot-inner">
+                  <span class="media-type">DIAGRAM</span>
+                  <span class="media-title">GAS Architecture Overview</span>
+                  <span class="media-coming">— Placeholder —</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ─── ANIMATION ─── -->
+      <div class="accordion-block" id="system-animation">
+        <button class="accordion-header" aria-expanded="false">
+          <div class="acc-left">
+            <span class="acc-num">04</span>
+            <span class="acc-arrow">⟩</span>
+            <span class="acc-title">ANIMATION</span>
+          </div>
+          <div class="acc-right">
+            <div class="acc-tags">
+              <span class="tag">Blueprint</span>
+              <span class="tag">AnimGraph</span>
+              <span class="tag">Curves</span>
+              <span class="tag">Mutable</span>
+            </div>
+            <span class="acc-toggle">+</span>
+          </div>
+        </button>
+        <div class="accordion-body">
+          <div class="acc-content">
+            <div class="acc-text">
+              <p>
+                State machine driven by Blueprint booleans (ADS, sprint, crouch, reload, fire)
+                feeding into an AnimGraph with per-layer blending.
+                First-person and third-person meshes are fully separate, each with
+                their own Animation Blueprint.
+              </p>
+              <p>
+                Weapon sway, bob, and recoil are <strong>curve-based</strong> —
+                authored directly in the Unreal editor as <code>UCurveVector</code> assets
+                and played back procedurally. This allows rapid per-weapon tuning to
+                match the tactile <em>MW2019</em> reference.
+              </p>
+              <ul class="acc-features">
+                <li>Camera recoil + weapon kick via <code>UCurveVector</code> playback, independently controllable</li>
+                <li>ADS blend with FOV transition curve</li>
+                <li>Sprint, crouch, idle, move state blending</li>
+                <li>Character bodies driven by <strong>Mutable plugin</strong> — runtime mesh customization</li>
+                <li>Hair via <code>UGroomComponent</code> (strand-based groom simulation)</li>
+              </ul>
+            </div>
+            <div class="acc-media">
+              <div class="media-slot">
+                <div class="media-slot-inner">
+                  <span class="media-type">GIF</span>
+                  <span class="media-title">Recoil &amp; ADS Demo</span>
+                  <span class="media-coming">— Placeholder —</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ─── AUDIO ─── -->
+      <div class="accordion-block" id="system-audio">
+        <button class="accordion-header" aria-expanded="false">
+          <div class="acc-left">
+            <span class="acc-num">05</span>
+            <span class="acc-arrow">⟩</span>
+            <span class="acc-title">AUDIO · METASOUNDS</span>
+          </div>
+          <div class="acc-right">
+            <div class="acc-tags">
+              <span class="tag">MetaSounds</span>
+              <span class="tag">C++</span>
+              <span class="tag">RPC</span>
+            </div>
+            <span class="acc-toggle">+</span>
+          </div>
+        </button>
+        <div class="accordion-body">
+          <div class="acc-content">
+            <div class="acc-text">
+              <p>
+                Weapon audio managed through <strong>MetaSound</strong> graphs for
+                precise layering of fire, tail, and mechanical sounds.
+                MetaSound asset references, attenuation settings, and submix routing
+                are stored directly on <code>UWeaponComponent</code> — keeping audio
+                data co-located with the weapon stats it belongs to.
+              </p>
+              <ul class="acc-features">
+                <li>Per-weapon MetaSound assets — fire layer + tail layer independently authored</li>
+                <li>Attenuation and submix routing configurable per weapon in WeaponComponent</li>
+                <li>Multicast RPC ensures fire audio synchronization across all clients</li>
+              </ul>
+            </div>
+            <div class="acc-media">
+              <div class="media-slot">
+                <div class="media-slot-inner">
+                  <span class="media-type">AUDIO</span>
+                  <span class="media-title">MetaSound Graph Preview</span>
+                  <span class="media-coming">— Placeholder —</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ─── NETWORKING ─── -->
+      <div class="accordion-block" id="system-network">
+        <button class="accordion-header" aria-expanded="false">
+          <div class="acc-left">
+            <span class="acc-num">06</span>
+            <span class="acc-arrow">⟩</span>
+            <span class="acc-title">NETWORKING &amp; REPLICATION</span>
+          </div>
+          <div class="acc-right">
+            <div class="acc-tags">
+              <span class="tag">C++</span>
+              <span class="tag">Server-Auth</span>
+              <span class="tag">RPC</span>
+            </div>
+            <span class="acc-toggle">+</span>
+          </div>
+        </button>
+        <div class="accordion-body">
+          <div class="acc-content">
+            <div class="acc-text">
+              <p>
+                Cooperative architecture — strictly <strong>server-authoritative</strong>.
+                All gameplay decisions (NPC AI, damage, ability activation) execute on
+                the server; results replicate to clients through properties and RPCs.
+              </p>
+              <p>
+                Player GAS lives on <code>ACustomPlayerState</code> to survive
+                respawn cycles without ability loss. NPC AI runs
+                <strong>server-only</strong> on <code>ABaseNPCController</code>;
+                observable results (alert state, animation) replicate as needed.
+              </p>
+              <ul class="acc-features">
+                <li>NPC alert state replicated via <code>ReplicatedAlertType</code> + <code>OnRep_AlertType</code></li>
+                <li>GAS attributes fully replicated with client-side prediction</li>
+                <li>Multicast RPC for networked fire audio</li>
+                <li>Server RPCs for ability activation and weapon actions</li>
+                <li>Team system via <code>IGenericTeamAgentInterface</code> — Player / Monsters / PMC / Neutral</li>
+              </ul>
+            </div>
+            <div class="acc-media">
+              <div class="media-slot">
+                <div class="media-slot-inner">
+                  <span class="media-type">GIF</span>
+                  <span class="media-title">Multiplayer CO-OP Session</span>
+                  <span class="media-coming">— Placeholder —</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ 3D WORK ══════════════════════════════════ -->
+  <section id="work3d">
+    <div class="section-header">
+      <div class="section-line"></div>
+      <div class="section-label">
+        <span class="section-num">[ 03 ]</span>
+        <h2 class="section-title">3D WORK</h2>
+      </div>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="container">
+
+      <!-- ─── WEAPONS GALLERY ─── -->
+      <div class="accordion-block" id="3d-weapons">
+        <button class="accordion-header" aria-expanded="true">
+          <div class="acc-left">
+            <span class="acc-num">01</span>
+            <span class="acc-arrow">⟩</span>
+            <span class="acc-title">WEAPONS — M4 MODULAR RIFLE</span>
+          </div>
+          <div class="acc-right">
+            <div class="acc-tags">
+              <span class="tag">Blender</span>
+              <span class="tag">Substance Painter</span>
+              <span class="tag">Hard Surface</span>
+              <span class="tag">Game-Ready</span>
+            </div>
+            <span class="acc-toggle">−</span>
+          </div>
+        </button>
+        <div class="accordion-body" style="display:block;">
+          <div class="acc-content acc-content--gallery">
+            <p class="gallery-desc">
+              Modular M4 / AR-15 platform built for Lowkey's weapon customization system.
+              Full accessory support — RIS rails, handguards, stocks, grips, suppressors,
+              scopes, multi-magazine variants. All components are game-ready
+              and socket-mountable in UE5.
+            </p>
+            <div class="gallery-grid" id="gallery-weapons">
+              <div class="gallery-item" data-gallery="weapons" data-index="0">
+                <img src="assets/images/m4_render_1.png" alt="M4 Modular Rifle — Full Assembly" loading="lazy">
+                <div class="gallery-overlay"><span>M4 — Full Assembly</span></div>
+              </div>
+              <div class="gallery-item" data-gallery="weapons" data-index="1">
+                <img src="assets/images/m4_render_2.png" alt="M4 Modular Rifle — Exploded View" loading="lazy">
+                <div class="gallery-overlay"><span>M4 — Exploded Accessories</span></div>
+              </div>
+              <div class="gallery-item" data-gallery="weapons" data-index="2">
+                <img src="assets/images/m4_render_3.png" alt="M4 Rail System Detail" loading="lazy">
+                <div class="gallery-overlay"><span>Rail System Detail</span></div>
+              </div>
+              <div class="gallery-item" data-gallery="weapons" data-index="3">
+                <img src="assets/images/m4_render_4.png" alt="M4 Iron Sights" loading="lazy">
+                <div class="gallery-overlay"><span>Iron Sights Alignment</span></div>
+              </div>
+              <div class="gallery-item" data-gallery="weapons" data-index="4">
+                <img src="assets/images/m4_render_5.png" alt="M4 Magazines and Accessories" loading="lazy">
+                <div class="gallery-overlay"><span>Magazines &amp; Attachments</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ─── PROPS / ENVIRONMENT ─── -->
+      <div class="accordion-block" id="3d-props">
+        <button class="accordion-header" aria-expanded="false">
+          <div class="acc-left">
+            <span class="acc-num">02</span>
+            <span class="acc-arrow">⟩</span>
+            <span class="acc-title">ENVIRONMENT &amp; PROPS</span>
+          </div>
+          <div class="acc-right">
+            <div class="acc-tags">
+              <span class="tag">Blender</span>
+              <span class="tag">Substance Painter</span>
+            </div>
+            <span class="acc-toggle">+</span>
+          </div>
+        </button>
+        <div class="accordion-body">
+          <div class="acc-content acc-content--gallery">
+            <p class="gallery-desc">
+              Environment assets and props for Lowkey's derelict, anomaly-ridden settings —
+              abandoned industrial zones, strange artifacts, degraded infrastructure.
+            </p>
+            <div class="gallery-placeholder">
+              <span class="gallery-placeholder-text">[ ASSETS COMING SOON ]</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ CONTACT ══════════════════════════════════ -->
+  <section id="contact">
+    <div class="section-header">
+      <div class="section-line"></div>
+      <div class="section-label">
+        <span class="section-num">[ 04 ]</span>
+        <h2 class="section-title">CONTACT</h2>
+      </div>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="container">
+      <p class="contact-intro">
+        Open to opportunities in game development — as programmer, technical artist, or both.
+      </p>
+      <div class="contact-grid">
+        <a href="https://github.com/" class="contact-card" target="_blank" rel="noopener">
+          <div class="contact-card-corner tl"></div>
+          <div class="contact-card-corner br"></div>
+          <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+          </svg>
+          <div class="contact-label">GITHUB</div>
+          <div class="contact-sub">Source &amp; Projects</div>
+        </a>
+
+        <a href="https://linkedin.com/" class="contact-card" target="_blank" rel="noopener">
+          <div class="contact-card-corner tl"></div>
+          <div class="contact-card-corner br"></div>
+          <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+          <div class="contact-label">LINKEDIN</div>
+          <div class="contact-sub">Professional Profile</div>
+        </a>
+
+        <a href="mailto:contact@example.com" class="contact-card">
+          <div class="contact-card-corner tl"></div>
+          <div class="contact-card-corner br"></div>
+          <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/>
+          </svg>
+          <div class="contact-label">EMAIL</div>
+          <div class="contact-sub">Direct Contact</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ FOOTER ═══════════════════════════════════ -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <span class="footer-logo">[LOWKEY]</span>
+      <span class="footer-sep">·</span>
+      <span class="footer-sub">Tactical Horror FPS · Built with Unreal Engine 5.7</span>
+      <span class="footer-sep footer-sep--right">·</span>
+      <span class="footer-year" id="footerYear"></span>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════ LIGHTBOX ════════════════════════════════ -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-frame">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+      <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous">‹</button>
+      <img class="lightbox-img" id="lightboxImg" src="" alt="">
+      <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next">›</button>
+      <div class="lightbox-info">
+        <span class="lightbox-caption" id="lightboxCaption"></span>
+        <span class="lightbox-counter" id="lightboxCounter"></span>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
