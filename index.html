@@ -43,6 +43,7 @@
           </a>
           <div class="nav-dropdown">
             <a href="#3d-art">Arsenal &amp; Equipment</a>
+            <a href="#3d-branding">UI &amp; Brand Design</a>
           </div>
         </li>
 
@@ -986,6 +987,165 @@
               </div>
             </div>
 
+          </div>
+        </div>
+      </div>
+
+      <!-- ══════════════════════ UI & BRAND DESIGN ══════════════════════ -->
+      <div class="accordion-block" id="3d-branding">
+        <button class="accordion-header" aria-expanded="false">
+          <div class="acc-left">
+            <span class="acc-num">02</span>
+            <span class="acc-arrow">⟩</span>
+            <span class="acc-title">UI &amp; BRAND DESIGN</span>
+          </div>
+          <div class="acc-right">
+            <div class="acc-tags">
+              <span class="tag">Affinity Designer</span>
+              <span class="tag">Figma</span>
+              <span class="tag">UE5 UMG</span>
+              <span class="tag">GAS-Driven UI</span>
+            </div>
+            <span class="acc-toggle">+</span>
+          </div>
+        </button>
+        <div class="accordion-body">
+          <div class="acc-summary">
+            <p>2D design work spanning game UI, brand identity, and iconography. Started with Figma for rapid wireframing, then migrated to Affinity Designer for production work — better precision, no subscription, and full control over vector and raster output. Assets range from GAS-driven HUD widgets (the alert eye reacts to <code>AlertLevel</code> in real time) to a full fictional manufacturer ecosystem giving each weapon faction a distinct visual identity.</p>
+            <div class="acc-media acc-media--contain">
+              <img src="assets/images/Branding/Laegjarn%20Weaponry%20Logo.png" alt="Laegjarn Weaponry" loading="lazy">
+            </div>
+          </div>
+          <div class="acc-implementations">
+
+            <!-- Tools -->
+            <div class="impl-block">
+              <button class="impl-header" aria-expanded="false">
+                <span class="impl-arrow">▶</span>
+                <span class="impl-title">Tools — Figma to Affinity</span>
+                <span class="impl-toggle">+</span>
+              </button>
+              <div class="impl-body">
+                <p>Early UI work was done in <strong>Figma</strong> — fast for layout and wireframing, but subscription-based and limited for precision vector export. As the project matured, switched to <strong>Affinity Designer</strong></p>
+                <p>Affinity's non-destructive workflow, non-subscription model made it the right long-term choice for building a consistent visual language across a solo project.</p>
+              </div>
+            </div>
+
+            <!-- Alert Widget -->
+            <div class="impl-block">
+              <button class="impl-header" aria-expanded="false">
+                <span class="impl-arrow">▶</span>
+                <span class="impl-title">NPC Alert Widget</span>
+                <span class="impl-toggle">+</span>
+              </button>
+              <div class="impl-body">
+                <p>The only visible UI cue the player has to read NPC awareness. An eye that opens progressively — driven in real time by the NPC's <code>AlertLevel</code> GAS attribute via a custom <code>M_DynamicFillImage</code> material using a vertical fill mask. Color shifts with alert state: white at low detection, yellow at suspicious, red at combat.</p>
+                <p>The eye shape was drawn in Affinity Designer and used as a mask texture in a UMG widget material. <code>WBP_NPCAlert</code> binds the fill percentage directly to the replicated <code>AlertLevel</code> attribute — no extra UI logic needed on the client side.</p>
+                <div class="impl-gallery impl-gallery--contain" data-gallery="alert-eye">
+                  <div class="gallery-item" data-gallery="alert-eye" data-index="0">
+                    <img src="assets/images/Branding/Eye%20detection%20low.png" alt="Alert Eye — Low Detection" loading="lazy">
+                    <div class="gallery-overlay"><span>Low — Calm</span></div>
+                  </div>
+                  <div class="gallery-item" data-gallery="alert-eye" data-index="1">
+                    <img src="assets/images/Branding/Eye%20detection%20sus.png" alt="Alert Eye — Suspicious" loading="lazy">
+                    <div class="gallery-overlay"><span>Suspicious</span></div>
+                  </div>
+                  <div class="gallery-item" data-gallery="alert-eye" data-index="2">
+                    <img src="assets/images/Branding/Eye%20detection%20combat.png" alt="Alert Eye — Combat" loading="lazy">
+                    <div class="gallery-overlay"><span>Combat</span></div>
+                  </div>
+                  <div class="gallery-item" data-gallery="alert-eye" data-index="3">
+                    <img src="assets/images/Branding/Eye%20Material.png" alt="M_DynamicFillImage — Material Graph" loading="lazy">
+                    <div class="gallery-overlay"><span>Material Graph</span></div>
+                  </div>
+                  <div class="gallery-item" data-gallery="alert-eye" data-index="4">
+                    <img src="assets/images/Branding/Eye.png" alt="Alert Eye — Source Texture" loading="lazy">
+                    <div class="gallery-overlay"><span>Source Texture</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Manufacturers -->
+            <div class="impl-block">
+              <button class="impl-header" aria-expanded="false">
+                <span class="impl-arrow">▶</span>
+                <span class="impl-title">Fictional Weapon Manufacturers</span>
+                <span class="impl-toggle">+</span>
+              </button>
+              <div class="impl-body">
+                <p>Each weapon faction in Lowkey has a corresponding manufacturer brand — giving the world depth and making gear feel like it belongs to a system rather than a prop collection.
+                  Logos reference real-world industrial and military aesthetic conventions as well as references and easter-eggs to my friends nickname and favorite animals.</p>
+                <div class="impl-gallery impl-gallery--contain" data-gallery="brands">
+                  <div class="gallery-item" data-gallery="brands" data-index="0">
+                    <img src="assets/images/Branding/ELOTEK.png" alt="ELOTEK" loading="lazy">
+                    <div class="gallery-overlay"><span>ELOTEK</span></div>
+                  </div>
+                  <div class="gallery-item" data-gallery="brands" data-index="1">
+                    <img src="assets/images/Branding/Group%20ELOTEK.png" alt="Group ELOTEK" loading="lazy">
+                    <div class="gallery-overlay"><span>Group ELOTEK</span></div>
+                  </div>
+                  <div class="gallery-item" data-gallery="brands" data-index="2">
+                    <img src="assets/images/Branding/GOS%20Brand.png" alt="GOS Brand" loading="lazy">
+                    <div class="gallery-overlay"><span>GOS Brand</span></div>
+                  </div>
+                  <div class="gallery-item" data-gallery="brands" data-index="3">
+                    <img src="assets/images/Branding/Laegjarn%20Weaponry%20Logo.png" alt="Laegjarn Weaponry" loading="lazy">
+                    <div class="gallery-overlay"><span>Laegjarn Weaponry</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- HUD Icons -->
+            <div class="impl-block">
+              <button class="impl-header" aria-expanded="false">
+                <span class="impl-arrow">▶</span>
+                <span class="impl-title">HUD Icons &amp; UI Elements</span>
+                <span class="impl-toggle">+</span>
+              </button>
+              <div class="impl-body">
+                <p>Minimal icon set for the in-game HUD — fire mode indicators (full auto, semi, single, safe), directional arrows, toggle states, and a custom holosight dot texture.</p>
+                <div class="impl-gallery impl-gallery--icons" data-gallery="hud-icons">
+                  <div class="gallery-item" data-gallery="hud-icons" data-index="0">
+                    <img src="assets/images/Branding/FullAuto.png" alt="Full Auto" loading="lazy">
+                    <div class="gallery-overlay"><span>Full Auto</span></div>
+                  </div>
+                  <div class="gallery-item" data-gallery="hud-icons" data-index="1">
+                    <img src="assets/images/Branding/SemiAuto.png" alt="Semi Auto" loading="lazy">
+                    <div class="gallery-overlay"><span>Semi Auto</span></div>
+                  </div>
+                  <div class="gallery-item" data-gallery="hud-icons" data-index="2">
+                    <img src="assets/images/Branding/Single%20Bullet.png" alt="Single Shot" loading="lazy">
+                    <div class="gallery-overlay"><span>Single Shot</span></div>
+                  </div>
+                  <div class="gallery-item" data-gallery="hud-icons" data-index="3">
+                    <img src="assets/images/Branding/Safe.png" alt="Safe" loading="lazy">
+                    <div class="gallery-overlay"><span>Safe</span></div>
+                  </div>
+                  <div class="gallery-item" data-gallery="hud-icons" data-index="4">
+                    <img src="assets/images/Branding/DOWN.png" alt="Arrow Down" loading="lazy">
+                    <div class="gallery-overlay"><span>Arrow Down</span></div>
+                  </div>
+                  <div class="gallery-item" data-gallery="hud-icons" data-index="5">
+                    <img src="assets/images/Branding/RIGHT.png" alt="Arrow Right" loading="lazy">
+                    <div class="gallery-overlay"><span>Arrow Right</span></div>
+                  </div>
+                  <div class="gallery-item" data-gallery="hud-icons" data-index="6">
+                    <img src="assets/images/Branding/ON.png" alt="ON" loading="lazy">
+                    <div class="gallery-overlay"><span>ON</span></div>
+                  </div>
+                  <div class="gallery-item" data-gallery="hud-icons" data-index="7">
+                    <img src="assets/images/Branding/OFF.png" alt="OFF" loading="lazy">
+                    <div class="gallery-overlay"><span>OFF</span></div>
+                  </div>
+                  <div class="gallery-item" data-gallery="hud-icons" data-index="8">
+                    <img src="assets/images/Branding/holosight_dot.png" alt="Holosight Dot" loading="lazy">
+                    <div class="gallery-overlay"><span>Holosight Dot</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

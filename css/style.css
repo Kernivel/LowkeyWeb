@@ -1059,6 +1059,42 @@ section { padding: clamp(3rem, 8vw, 5rem) 0; }
   margin-top: 0.8rem;
 }
 
+/* Contain variant — transparent-bg logos & artwork */
+.acc-media--contain img {
+  object-fit: contain;
+}
+
+.impl-gallery--contain .gallery-item {
+  background: var(--bg-card-alt);
+}
+.impl-gallery--contain .gallery-item img {
+  object-fit: contain;
+  filter: none;
+  padding: 0.75rem;
+}
+.impl-gallery--contain .gallery-item:hover img {
+  filter: none;
+  transform: scale(1.03);
+}
+
+/* Icon variant — small square HUD icons */
+.impl-gallery--icons {
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+}
+.impl-gallery--icons .gallery-item {
+  aspect-ratio: 1;
+  background: var(--bg-card-alt);
+}
+.impl-gallery--icons .gallery-item img {
+  object-fit: contain;
+  filter: none;
+  padding: 0.5rem;
+}
+.impl-gallery--icons .gallery-item:hover img {
+  filter: none;
+  transform: scale(1.08);
+}
+
 /* Responsive adjustments for new layout */
 @media (max-width: 900px) {
   .acc-summary {
