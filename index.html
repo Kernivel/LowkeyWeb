@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=3">
 </head>
 <body>
 
@@ -44,6 +44,7 @@
           <div class="nav-dropdown">
             <a href="#3d-art">Arsenal &amp; Equipment</a>
             <a href="#3d-branding">UI &amp; Brand Design</a>
+            <a href="#3d-leveldesign">Level Design</a>
           </div>
         </li>
 
@@ -56,6 +57,12 @@
 
     </div>
   </nav>
+
+  <!-- WIP BANNER -->
+  <div class="wip-banner">
+    <span class="wip-banner-icon">⚠</span>
+    <span class="wip-banner-text">Active development — this portfolio documents work in progress. Some systems are incomplete and media captures are pending.</span>
+  </div>
 
   <!-- ═══════════════════════════════════ HERO ═════════════════════════════════════ -->
   <section id="hero">
@@ -133,10 +140,10 @@
           <p>
             <strong>Lowkey</strong> — my current project — is a cooperative tactical horror FPS
             with a strong focus on gunplay and atmosphere, set in an SCP-like universe.
-            The game revolves around hunting down artifacts and anomalies as part of a co-op
-            extraction loop — where players drop into degraded environments, recover high-value
-            artefacts, and extract alive. Artefacts fund new equipment and unlock crafted
-            abilities. Losing will set you back a little — just enough to keep you on your toes.
+            The planned game loop revolves around hunting down artifacts and anomalies in a co-op
+            extraction format — players drop into degraded environments, recover high-value
+            artefacts, and extract alive. The design intent: artefacts fund equipment and unlock
+            crafted abilities, with meaningful loss to keep tension — still early in development.
           </p>
           <p>
             It is where I apply and push everything I learned over the years — From both my work and my free time —
@@ -231,7 +238,8 @@
                 <div class="media-slot-inner">
                   <span class="media-type">VIDEO</span>
                   <span class="media-title">Weapon System Overview</span>
-                  <span class="media-coming">— Placeholder —</span>
+                  <span class="media-coming">[ Capture pending ]</span>
+                  <span class="media-note">System implemented — media being recorded</span>
                 </div>
               </div>
             </div>
@@ -318,14 +326,15 @@
               NPCs in Lowkey are designed to be readable — predictable enough to reward careful planning, yet dangerous enough to punish mistakes.
               Their implementation combines Behaviour Trees and GAS Abilities/Attributes.
               NPCs work with limited information — sight and hearing only — and never have direct access to the player's position. They investigate before committing to combat.
-              In combat, they shoot, reposition actively, take cover to reload, and attempt to flush the player out of cover.
+              Combat behaviour — suppression, repositioning, cover usage — is planned and in active development.
             </p>
             <div class="acc-media">
               <div class="media-slot">
                 <div class="media-slot-inner">
                   <span class="media-type">VIDEO</span>
                   <span class="media-title">Alert State Machine Demo</span>
-                  <span class="media-coming">— Placeholder —</span>
+                  <span class="media-coming">[ Capture pending ]</span>
+                  <span class="media-note">System implemented — media being recorded</span>
                 </div>
               </div>
             </div>
@@ -413,7 +422,8 @@
                 <div class="media-slot-inner">
                   <span class="media-type">DIAGRAM</span>
                   <span class="media-title">GAS Architecture</span>
-                  <span class="media-coming">— Placeholder —</span>
+                  <span class="media-coming">[ Capture pending ]</span>
+                  <span class="media-note">System implemented — media being recorded</span>
                 </div>
               </div>
             </div>
@@ -582,7 +592,8 @@
                 <div class="media-slot-inner">
                   <span class="media-type">AUDIO</span>
                   <span class="media-title">MetaSound Graph Preview</span>
-                  <span class="media-coming">— Placeholder —</span>
+                  <span class="media-coming">[ Capture pending ]</span>
+                  <span class="media-note">System implemented — media being recorded</span>
                 </div>
               </div>
             </div>
@@ -653,7 +664,8 @@
                 <div class="media-slot-inner">
                   <span class="media-type">GIF</span>
                   <span class="media-title">Multiplayer CO-OP Session</span>
-                  <span class="media-coming">— Placeholder —</span>
+                  <span class="media-coming">[ Capture pending ]</span>
+                  <span class="media-note">System implemented — media being recorded</span>
                 </div>
               </div>
             </div>
@@ -1146,6 +1158,132 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══════════════════════ LEVEL DESIGN ══════════════════════ -->
+      <div class="accordion-block" id="3d-leveldesign">
+        <button class="accordion-header" aria-expanded="false">
+          <div class="acc-left">
+            <span class="acc-num">03</span>
+            <span class="acc-arrow">⟩</span>
+            <span class="acc-title">LEVEL DESIGN</span>
+          </div>
+          <div class="acc-right">
+            <div class="acc-tags">
+              <span class="tag">UE5 Modelling Tools</span>
+              <span class="tag">Quixel Megascans</span>
+              <span class="tag">Niagara</span>
+              <span class="tag">Landscape Splines</span>
+              <span class="tag">Foliage Tool</span>
+            </div>
+            <span class="acc-toggle">+</span>
+          </div>
+        </button>
+        <div class="accordion-body">
+          <div class="acc-summary">
+            <p>Early WIP — a sandbox for exploring UE5's level design toolset. The focus at this stage is getting familiar with the tools: Modelling Tools for blockout, Quixel Megascans for rapid dressing, Landscape Splines for paths, and Niagara for ambient FX. No final layout intent yet, just hands-on tool exploration inside the engine.</p>
+            <div class="acc-media">
+              <img src="assets/images/Maps/map_05.png" alt="Level — Exterior Facade & Rockface" loading="lazy">
+            </div>
+          </div>
+          <div class="acc-implementations">
+
+            <!-- Test Map -->
+            <div class="impl-block">
+              <button class="impl-header" aria-expanded="false">
+                <span class="impl-arrow">▶</span>
+                <span class="impl-title">Systems Test Map — Navigation, AI &amp; Audio</span>
+                <span class="impl-toggle">+</span>
+              </button>
+              <div class="impl-body">
+                <p>A dedicated greybox environment for testing game systems in isolation — modular concrete walls and open spaces with a clean nav mesh, used to validate NPC navigation, alert detection, animation state transitions, MetaSound audio, and soundscape reverb zones. Keeping it separate from the WIP level avoids visual noise during systems iteration.</p>
+                <div class="impl-gallery" data-gallery="map-testenv">
+                  <div class="gallery-item" data-gallery="map-testenv" data-index="0">
+                    <img src="assets/images/Maps/map_06.png" alt="Systems Test Map — Greybox QA Environment" loading="lazy">
+                    <div class="gallery-overlay"><span>Systems Test Map</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Blockout -->
+            <div class="impl-block">
+              <button class="impl-header" aria-expanded="false">
+                <span class="impl-arrow">▶</span>
+                <span class="impl-title">Blockout — UE5 Modelling Tools</span>
+                <span class="impl-toggle">+</span>
+              </button>
+              <div class="impl-body">
+                <p>Work is done with UE5's built-in Modelling Tools — no external DCC. Volumes are roughed out as simple primitives directly in the viewport to explore spatial proportions and flow.</p>
+                <div class="impl-gallery" data-gallery="map-blockout">
+                  <div class="gallery-item" data-gallery="map-blockout" data-index="0">
+                    <img src="assets/images/Maps/map_01.png" alt="Interior Blockout — Primitives & Pillars" loading="lazy">
+                    <div class="gallery-overlay"><span>Interior Blockout</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quixel & World-Space Textures -->
+            <div class="impl-block">
+              <button class="impl-header" aria-expanded="false">
+                <span class="impl-arrow">▶</span>
+                <span class="impl-title">Environment Dressing — Quixel &amp; World-Space Textures</span>
+                <span class="impl-toggle">+</span>
+              </button>
+              <div class="impl-body">
+                <p>Quixel Megascans assets are dropped in to quickly test visual density and material variety — photogrammetry rocks, concrete surfaces, industrial debris and cargo. Large structural surfaces use world-space UVs so tiling stays consistent regardless of mesh scale or orientation, avoiding visible texture seams across modular pieces.</p>
+                <div class="impl-gallery" data-gallery="map-quixel">
+                  <div class="gallery-item" data-gallery="map-quixel" data-index="0">
+                    <img src="assets/images/Maps/map_04.png" alt="Warehouse — Quixel Concrete & Cargo" loading="lazy">
+                    <div class="gallery-overlay"><span>Warehouse — Quixel Dressing</span></div>
+                  </div>
+                  <div class="gallery-item" data-gallery="map-quixel" data-index="1">
+                    <img src="assets/images/Maps/map_05.png" alt="Exterior — Megascans Rockface & Facade" loading="lazy">
+                    <div class="gallery-overlay"><span>Exterior — Megascans Rockface</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Splines & Foliage -->
+            <div class="impl-block">
+              <button class="impl-header" aria-expanded="false">
+                <span class="impl-arrow">▶</span>
+                <span class="impl-title">Landscape Splines &amp; Foliage Tool</span>
+                <span class="impl-toggle">+</span>
+              </button>
+              <div class="impl-body">
+                <p>Roads and paths are built with Landscape Splines — they deform the terrain underneath and drive the road mesh automatically, keeping the ground plane clean without manual sculpting. Organic cover (bushes, hedges, ground clutter) is distributed with the Foliage Tool to test natural-looking scatter over defined areas.</p>
+                <div class="impl-gallery" data-gallery="map-splines">
+                  <div class="gallery-item" data-gallery="map-splines" data-index="0">
+                    <img src="assets/images/Maps/map_02.png" alt="Aerial View — Splines & Foliage" loading="lazy">
+                    <div class="gallery-overlay"><span>Aerial — Splines &amp; Foliage</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Atmosphere & Niagara -->
+            <div class="impl-block">
+              <button class="impl-header" aria-expanded="false">
+                <span class="impl-arrow">▶</span>
+                <span class="impl-title">Atmosphere — Lighting &amp; Niagara FX</span>
+                <span class="impl-toggle">+</span>
+              </button>
+              <div class="impl-body">
+                <p>Early mood exploration — testing how directional and local lighting interact with the geometry to create atmosphere. Niagara handles ambient FX: dust particles in light beams and drifting debris through open roof sections. Still WIP, focused on feel rather than final lighting intent.</p>
+                <div class="impl-gallery" data-gallery="map-atmo">
+                  <div class="gallery-item" data-gallery="map-atmo" data-index="0">
+                    <img src="assets/images/Maps/map_03.png" alt="Dark Interior — Atmospheric Lighting" loading="lazy">
+                    <div class="gallery-overlay"><span>Atmospheric Interior</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
